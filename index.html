@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="doc_title">DentaLux — Zamonaviy Stomatologiya Klinikasi</title>
+  <meta name="description" content="Toshkentdagi ilg'or zamonaviy stomatologiya klinikasi. Og'riqsiz davolash, implantatsiya, vinirlar va breketlar.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Info Bar -->
+  <aside class="top-bar" aria-label="Klinika aloqa ma'lumotlari">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="info-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span data-i18n="topbar_address">Toshkent sh., Amir Temur shox ko'chasi, 45-uy</span>
+        </span>
+        <span class="info-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span data-i18n="topbar_schedule">Dush - Shan: 08:30 — 20:00 (Yakshanba: 09:00 — 16:00)</span>
+        </span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+998712001122" class="phone-link">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +998 (71) 200-11-22
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Navigation Header -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#hero" class="logo" aria-label="Bosh sahifaga">
+        <div class="logo-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 3C11.5 3 9 6.5 9 10C9 13.5 10.5 16 11.5 19C12.5 22 13 29 15 29C16.5 29 16.5 23 16 20C15.5 23 15.5 29 17 29C19 29 19.5 22 20.5 19C21.5 16 23 13.5 23 10C23 6.5 20.5 3 16 3Z" fill="url(#tooth-grad)" stroke="#0284c7" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M12 9C13 7.5 14.5 7 16 7C17.5 7 19 7.5 20 9" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="tooth-grad" x1="9" y1="3" x2="23" y2="29" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#38bdf8"/>
+                <stop offset="1" stop-color="#0284c7"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">Denta<span>Lux</span></span>
+          <span class="logo-subtitle" data-i18n="logo_subtitle">Stomatologiya Markazi</span>
+        </div>
+      </a>
+
+      <!-- Nav Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active" data-i18n="nav_home">Bosh sahifa</a></li>
+          <li><a href="#services" class="nav-link" data-i18n="nav_services">Xizmatlar</a></li>
+          <li><a href="#advantages" class="nav-link" data-i18n="nav_advantages">Afzalliklar</a></li>
+          <li><a href="#doctors" class="nav-link" data-i18n="nav_doctors">Shifokorlar</a></li>
+          <li><a href="#prices" class="nav-link" data-i18n="nav_prices">Narxlar</a></li>
+          <li><a href="#reviews" class="nav-link" data-i18n="nav_reviews">Fikrlar</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Bog'lanish</a></li>
+        </ul>
+        <div class="mobile-cta-wrapper">
+          <button class="btn btn-primary btn-block open-modal-btn" data-i18n="btn_book">Qabulga yozilish</button>
+        </div>
+      </nav>
+
+      <!-- Action Button, Stickman Lang Switcher & Hamburger -->
+      <div class="header-actions">
+        <!-- Neumorphic Stickman Language Switcher (from reference video) -->
+        <div class="stickman-toggle-wrap" title="Tilni almashtirish / Сменить язык (UZ / RU)">
+          <div class="stickman-toggle" id="stickmanToggle" data-lang="uz" role="button" tabindex="0" aria-label="Tilni tanlash (UZ / RU)">
+            <!-- Left Dial / Knob -->
+            <div class="toggle-knob" id="toggleKnob">
+              <span class="knob-icon-sun">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.5"><circle cx="12" cy="12" r="5" fill="#f59e0b"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+              </span>
+              <span class="knob-icon-moon">
+                <svg viewBox="0 0 24 24" fill="#38bdf8" stroke="#38bdf8" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              </span>
+              <span class="knob-text" id="knobText">UZ</span>
+            </div>
+
+            <!-- Inset Hole on the right -->
+            <div class="toggle-hole" id="toggleHole">
+              <span class="hole-text" id="holeText">RU</span>
+            </div>
+
+            <!-- Canvas for Animated Stickman -->
+            <canvas id="stickmanCanvas" class="stickman-canvas" width="130" height="42"></canvas>
+          </div>
+        </div>
+
+        <button class="btn btn-primary desktop-cta open-modal-btn">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+          <span data-i18n="btn_book">Qabulga yozilish</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menyu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+    </div>
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="badge-pill">
+          <span class="pulse-dot"></span>
+          <span data-i18n="hero_badge">Eng so'nggi nemis stomatologiya texnologiyalari</span>
+        </div>
+        <h1 class="hero-title" data-i18n-html="hero_title">
+          Beg'ubor va sog'lom <span class="highlight">tabassum</span> baxti!
+        </h1>
+        <p class="hero-desc" data-i18n="hero_desc">
+          DentaLux klinikasida og'riqsiz, tezkor va 100% kafolatli stomatologik yordam. Biz bilan tishlaringiz go'zalligi va salomatligini ishonchli qo'llarga topshiring.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-lg open-modal-btn">
+            <span data-i18n="hero_btn_consult">Bepul ko'rikka yozilish</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+          <a href="#services" class="btn btn-outline btn-lg" data-i18n="hero_btn_services">
+            Xizmatlar bilan tanishish
+          </a>
+        </div>
+
+        <!-- Trust Stats -->
+        <div class="hero-stats">
+          <div class="stat-card">
+            <span class="stat-num">15+</span>
+            <span class="stat-label" data-i18n="stat_exp">Yillik tajriba</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <span class="stat-num">28 000+</span>
+            <span class="stat-label" data-i18n="stat_clients">Mamnun mijozlar</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <span class="stat-num">100%</span>
+            <span class="stat-label" data-i18n="stat_painless">Og'riqsiz davolash</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-img-wrapper">
+          <div class="doctor-badge-floating">
+            <div class="doctor-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <strong data-i18n="badge_guarantee_title">100% Kafolat</strong>
+              <p data-i18n="badge_guarantee_desc">Har bir muolajaga 5 yil</p>
+            </div>
+          </div>
+
+          <div class="rating-badge-floating">
+            <div class="stars">★★★★★</div>
+            <strong>4.9 / 5.0</strong>
+            <span data-i18n="badge_reviews_count">1,400+ fikrlar</span>
+          </div>
+
+          <!-- Hero Main Graphic Card -->
+          <div class="hero-illustration-card">
+            <div class="card-inner-glow"></div>
+            <div class="illustration-art">
+              <div class="dental-chair-mockup">
+                <div class="mockup-header">
+                  <div class="clinic-status">
+                    <span class="status-indicator"></span> <span data-i18n="hero_status_open">Hozir qabul ochiq</span>
+                  </div>
+                  <span class="promo-tag" data-i18n="hero_promo_tag">-20% Birinchi qabul</span>
+                </div>
+                
+                <div class="quick-booking-box">
+                  <h3 data-i18n="quick_form_title">Tezkor konsultatsiya</h3>
+                  <p data-i18n="quick_form_desc">Telefoningizni qoldiring, 5 daqiqada qayta qo'ng'iroq qilamiz</p>
+                  <form class="hero-mini-form" id="heroQuickForm">
+                    <input type="tel" placeholder="+998 (__) ___-__-__" required class="form-input">
+                    <button type="submit" class="btn btn-primary btn-block" data-i18n="quick_form_btn">Qo'ng'iroq kutish</button>
+                  </form>
+                  <div class="security-note">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    <span data-i18n="security_note">Ma'lumotlaringiz to'liq sir saqlanadi</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Strip -->
+  <section class="features-bar">
+    <div class="container features-grid">
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+        </div>
+        <div>
+          <h4 data-i18n="feat_1_title">Germaniya uskunalari</h4>
+          <p data-i18n="feat_1_desc">Kavo va Sirona zamonaviy tizimlari</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+        </div>
+        <div>
+          <h4 data-i18n="feat_2_title">Mutlaqo og'riqsiz</h4>
+          <p data-i18n="feat_2_desc">Kompyuterlashgan zamonaviy anesteziya</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        </div>
+        <div>
+          <h4 data-i18n="feat_3_title">Bo'lib to'lash (0%)</h4>
+          <p data-i18n="feat_3_desc">Implant va breketlar uchun qulay to'lov</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <h4 data-i18n="feat_4_title">100% Sterillik</h4>
+          <p data-i18n="feat_4_desc">Avtoklavlash va xavfsizlik protokollari</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section services-section" id="services">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag" data-i18n="services_tag">Bizning xizmatlar</span>
+        <h2 class="section-title" data-i18n="services_title">Har qanday stomatologik muammoga professional yechim</h2>
+        <p class="section-subtitle" data-i18n="services_subtitle">
+          Tishlarni profilaktika qilishdan boshlab murakkab implantatsiya va estetika operatsiyalarigacha eng yuqori darajada bajaramiz.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service Card 1 -->
+        <article class="service-card">
+          <div class="service-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 class="service-title" data-i18n="srv_1_title">Terapevtik davolash</h3>
+          <p class="service-desc" data-i18n="srv_1_desc">Kariyes, pulpit va periodontitni zamonaviy yorug'lik kompozitlari yordamida izsiz va og'riqsiz davolash.</p>
+          <ul class="service-features">
+            <li data-i18n="srv_1_f1">Kariyesni davolash va estetik plomba</li>
+            <li data-i18n="srv_1_f2">Tish kanallarini mikroskop ostida tozalash</li>
+            <li data-i18n="srv_1_f3">Tish nervlarini xavfsiz davolash</li>
+          </ul>
+          <div class="service-footer">
+            <span class="service-price" data-i18n="srv_1_price">180 000 so'mdan</span>
+            <button class="service-btn open-modal-btn" data-service="Terapevtik davolash" data-i18n-html="btn_service_book">Yozilish &rarr;</button>
+          </div>
+        </article>
+
+        <!-- Service Card 2 -->
+        <article class="service-card featured">
+          <div class="card-badge" data-i18n="badge_popular">Ommabop</div>
+          <div class="service-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <h3 class="service-title" data-i18n="srv_2_title">Implantatsiya</h3>
+          <p class="service-desc" data-i18n="srv_2_desc">Yo'qotilgan tishlarni Shveytsariya (Straumann) va Janubiy Koreya (Osstem) titan implantlari bilan 100% tiklash.</p>
+          <ul class="service-features">
+            <li data-i18n="srv_2_f1">Bir kunlik (tezkor) implantatsiya</li>
+            <li data-i18n="srv_2_f2">Sinus-lifting va suyak o'stirish</li>
+            <li data-i18n="srv_2_f3">Umrbod kafolat kartasi</li>
+          </ul>
+          <div class="service-footer">
+            <span class="service-price" data-i18n="srv_2_price">2 500 000 so'mdan</span>
+            <button class="service-btn open-modal-btn" data-service="Implantatsiya" data-i18n-html="btn_service_book">Yozilish &rarr;</button>
+          </div>
+        </article>
+
+        <!-- Service Card 3 -->
+        <article class="service-card">
+          <div class="service-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+          </div>
+          <h3 class="service-title" data-i18n="srv_3_title">Ortodontiya (Breketlar)</h3>
+          <p class="service-desc" data-i18n="srv_3_desc">Tishlar egriligini va tishlam (prikus) nuqsonlarini tuzatish: metall, keramik, sapfir breketlar va ko'rinmas elaynerlar.</p>
+          <ul class="service-features">
+            <li data-i18n="srv_3_f1">Metall va keramik breket tizimlari</li>
+            <li data-i18n="srv_3_f2">Ko'rinmas shaffof elaynerlar</li>
+            <li data-i18n="srv_3_f3">Bolalar va kattalar uchun to'g'rilash</li>
+          </ul>
+          <div class="service-footer">
+            <span class="service-price" data-i18n="srv_3_price">3 200 000 so'mdan</span>
+            <button class="service-btn open-modal-btn" data-service="Ortodontiya" data-i18n-html="btn_service_book">Yozilish &rarr;</button>
+          </div>
+        </article>
+
+        <!-- Service Card 4 -->
+        <article class="service-card">
+          <div class="service-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3 class="service-title" data-i18n="srv_4_title">Vinirlar va Estetika</h3>
+          <p class="service-desc" data-i18n="srv_4_desc">Gollivud tabassumi! E.max keramikasi va kompozit vinirlar orqali tish shakli va oppoqligini mukammallashtirish.</p>
+          <ul class="service-features">
+            <li data-i18n="srv_4_f1">Ultra yupqa E.max keramik vinirlar</li>
+            <li data-i18n="srv_4_f2">Professional lazerli oqartirish (Zoom 4)</li>
+            <li data-i18n="srv_4_f3">Raqamli tabassum dizayni (DSD)</li>
+          </ul>
+          <div class="service-footer">
+            <span class="service-price" data-i18n="srv_4_price">1 400 000 so'mdan</span>
+            <button class="service-btn open-modal-btn" data-service="Vinirlar va Estetika" data-i18n-html="btn_service_book">Yozilish &rarr;</button>
+          </div>
+        </article>
+
+        <!-- Service Card 5 -->
+        <article class="service-card">
+          <div class="service-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h3 class="service-title" data-i18n="srv_5_title">Tish protezlari (Ortopediya)</h3>
+          <p class="service-desc" data-i18n="srv_5_desc">Sirkoniy qoplamalar, metallokeramika hamda to'liq va qisman olinadigan zamonaviy yengil protezlar.</p>
+          <ul class="service-features">
+            <li data-i18n="srv_5_f1">Sirkoniy dioksid qoplamalar</li>
+            <li data-i18n="srv_5_f2">Ko'prikli konstruksiyalar</li>
+            <li data-i18n="srv_5_f3">Moslashuvchan neylon protezlar</li>
+          </ul>
+          <div class="service-footer">
+            <span class="service-price" data-i18n="srv_5_price">800 000 so'mdan</span>
+            <button class="service-btn open-modal-btn" data-service="Ortopediya" data-i18n-html="btn_service_book">Yozilish &rarr;</button>
+          </div>
+        </article>
+
+        <!-- Service Card 6 -->
+        <article class="service-card">
+          <div class="service-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <h3 class="service-title" data-i18n="srv_6_title">Bolalar stomatologiyasi</h3>
+          <p class="service-desc" data-i18n="srv_6_desc">Kichkintoylar uchun qo'rquv va ko'z yoshlarsiz davolash. O'yin tarzida muloqot va maxsus rangli plombalar.</p>
+          <ul class="service-features">
+            <li data-i18n="srv_6_f1">Sut tishlarini og'riqsiz davolash</li>
+            <li data-i18n="srv_6_f2">Fissuralarni germetizatsiya qilish</li>
+            <li data-i18n="srv_6_f3">Tish emalini mustahkamlash</li>
+          </ul>
+          <div class="service-footer">
+            <span class="service-price" data-i18n="srv_6_price">120 000 so'mdan</span>
+            <button class="service-btn open-modal-btn" data-service="Bolalar stomatologiyasi" data-i18n-html="btn_service_book">Yozilish &rarr;</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advantages Section -->
+  <section class="section advantages-section" id="advantages">
+    <div class="container">
+      <div class="advantages-wrapper">
+        <div class="advantages-left">
+          <span class="section-tag" data-i18n="adv_tag">Nega aynan DentaLux?</span>
+          <h2 class="section-title" data-i18n="adv_title">Sizning qulayligingiz va xavfsizligingiz — bizning bosh mezonimiz</h2>
+          <p class="section-desc" data-i18n="adv_desc">
+            Biz har bir bemorga individual yondashamiz. Klinikamizda yaratilgan shinam muhit, yuqori darajadagi xizmat ko'rsatish va ilg'or texnologiyalar stomatolog huzuriga kelishni yoqimli tajribaga aylantiradi.
+          </p>
+          
+          <div class="adv-list">
+            <div class="adv-card">
+              <div class="adv-number">01</div>
+              <div>
+                <h4 data-i18n="adv_1_h">Oliy toifali shifokorlar jamoasi</h4>
+                <p data-i18n="adv_1_p">Mutaxassislarimiz Yevropa va Janubiy Koreyaning yetakchi klinikalarida malaka oshirgan.</p>
+              </div>
+            </div>
+
+            <div class="adv-card">
+              <div class="adv-number">02</div>
+              <div>
+                <h4 data-i18n="adv_2_h">3D Kompyuter tomografiyasi (KT)</h4>
+                <p data-i18n="adv_2_p">Aniq tashxis qo'yish uchun klinikamizning o'zida zamonaviy 3D rentgen va tomografiya mavjud.</p>
+              </div>
+            </div>
+
+            <div class="adv-card">
+              <div class="adv-number">03</div>
+              <div>
+                <h4 data-i18n="adv_3_h">5 yillik rasmiy kafolat shartnomasi</h4>
+                <p data-i18n="adv_3_p">Biz o'z ishimiz sifatiga to'liq ishonamiz va har bir muolajaga yozma kafolat beramiz.</p>
+              </div>
+            </div>
+
+            <div class="adv-card">
+              <div class="adv-number">04</div>
+              <div>
+                <h4 data-i18n="adv_4_h">Shaffof narxlar, yashirin to'lovlarsiz</h4>
+                <p data-i18n="adv_4_p">Davolash rejasi va yakuniy narx muolaja boshlanishidan oldin to'liq kelishib olinadi.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="advantages-right">
+          <div class="experience-showcase">
+            <div class="exp-badge">
+              <span class="exp-number">15</span>
+              <span class="exp-text" data-i18n="exp_title">Yillik mukammal obro'</span>
+            </div>
+            <div class="clinic-perks">
+              <div class="perk-box">
+                <span class="perk-icon">💎</span>
+                <h5 data-i18n="perk_1_h">Yuqori sifatli materiallar</h5>
+                <p data-i18n="perk_1_p">Faqat sertifikatlangan Yevropa xom-ashyosi</p>
+              </div>
+              <div class="perk-box">
+                <span class="perk-icon">☕</span>
+                <h5 data-i18n="perk_2_h">Shinam kutish zali</h5>
+                <p data-i18n="perk_2_p">Wi-Fi, mazali qahva va dam olish hududi</p>
+              </div>
+              <div class="perk-box">
+                <span class="perk-icon">🚗</span>
+                <h5 data-i18n="perk_3_h">Qulay avtoturargoh</h5>
+                <p data-i18n="perk_3_p">Klinika mijozlari uchun bepul va xavfsiz parking</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Doctors Section -->
+  <section class="section doctors-section" id="doctors">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag" data-i18n="doc_tag">Bizning mutaxassislar</span>
+        <h2 class="section-title" data-i18n="doc_title">O'z ishining yetuk ustalari</h2>
+        <p class="section-subtitle" data-i18n="doc_subtitle">
+          Klinikamizda ko'p yillik amaliy tajribaga ega, oliy toifali shifokor-stomatologlar faoliyat yuritadi.
+        </p>
+      </div>
+
+      <div class="doctors-grid">
+        <!-- Doctor 1 -->
+        <div class="doctor-card">
+          <div class="doctor-avatar">
+            <img src="images/doctor-1.jpg" alt="Dr. Rustam Alimov" class="doc-img" loading="lazy">
+            <span class="doc-exp-badge" data-i18n="doc_1_exp">14 yil tajriba</span>
+          </div>
+          <div class="doctor-info">
+            <h3 class="doc-name" data-i18n="doc_1_name">Dr. Rustam Alimov</h3>
+            <span class="doc-role" data-i18n="doc_1_role">Bosh shifokor, Implantolog-jarroh</span>
+            <p class="doc-bio" data-i18n="doc_1_bio">Germaniya va Rossiyada malaka oshirgan. 4,000 dan ortiq muvaffaqiyatli implant o'rnatgan.</p>
+            <button class="btn btn-outline btn-sm btn-block open-modal-btn" data-doctor="Dr. Rustam Alimov" data-i18n="doc_btn_book">Qabuliga yozilish</button>
+          </div>
+        </div>
+
+        <!-- Doctor 2 -->
+        <div class="doctor-card">
+          <div class="doctor-avatar">
+            <img src="images/doctor-2.jpg" alt="Dr. Nigora Karimova" class="doc-img" loading="lazy">
+            <span class="doc-exp-badge" data-i18n="doc_2_exp">10 yil tajriba</span>
+          </div>
+          <div class="doctor-info">
+            <h3 class="doc-name" data-i18n="doc_2_name">Dr. Nigora Karimova</h3>
+            <span class="doc-role" data-i18n="doc_2_role">Ortodont (Breket mutaxassisi)</span>
+            <p class="doc-bio" data-i18n="doc_2_bio">Elaynerlar va zamonaviy breket tizimlari bo'yicha xalqaro sertifikatlar sohibasi.</p>
+            <button class="btn btn-outline btn-sm btn-block open-modal-btn" data-doctor="Dr. Nigora Karimova" data-i18n="doc_btn_book">Qabuliga yozilish</button>
+          </div>
+        </div>
+
+        <!-- Doctor 3 -->
+        <div class="doctor-card">
+          <div class="doctor-avatar">
+            <img src="images/doctor-3.jpg" alt="Dr. Jasur Sobirov" class="doc-img" loading="lazy">
+            <span class="doc-exp-badge" data-i18n="doc_3_exp">12 yil tajriba</span>
+          </div>
+          <div class="doctor-info">
+            <h3 class="doc-name" data-i18n="doc_3_name">Dr. Jasur Sobirov</h3>
+            <span class="doc-role" data-i18n="doc_3_role">Ortoped-stomatolog, Vinir ustasi</span>
+            <p class="doc-bio" data-i18n="doc_3_bio">Estetik stomatologiya va sirkoniy qoplamalar bo'yicha yuqori toifali mutaxassis.</p>
+            <button class="btn btn-outline btn-sm btn-block open-modal-btn" data-doctor="Dr. Jasur Sobirov" data-i18n="doc_btn_book">Qabuliga yozilish</button>
+          </div>
+        </div>
+
+        <!-- Doctor 4 -->
+        <div class="doctor-card">
+          <div class="doctor-avatar">
+            <img src="images/doctor-4.jpg" alt="Dr. Madina Umarova" class="doc-img doc-img-female-alt" loading="lazy">
+            <span class="doc-exp-badge" data-i18n="doc_4_exp">8 yil tajriba</span>
+          </div>
+          <div class="doctor-info">
+            <h3 class="doc-name" data-i18n="doc_4_name">Dr. Madina Umarova</h3>
+            <span class="doc-role" data-i18n="doc_4_role">Bolalar stomatologi, Terapevt</span>
+            <p class="doc-bio" data-i18n="doc_4_bio">Bolalarning eng sevimli tish shifokori. Psixologik qo'rquvsiz davolash uslubi egasi.</p>
+            <button class="btn btn-outline btn-sm btn-block open-modal-btn" data-doctor="Dr. Madina Umarova" data-i18n="doc_btn_book">Qabuliga yozilish</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Price Table Section -->
+  <section class="section prices-section" id="prices">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag" data-i18n="prices_tag">Shaffof narxlar</span>
+        <h2 class="section-title" data-i18n="prices_title">Xizmatlar narxnoma ro'yxati</h2>
+        <p class="section-subtitle" data-i18n="prices_subtitle">Klinikamizda hech qanday yashirin to'lovlar yo'q. Dastlabki ko'rik va maslahat — mutlaqo bepul!</p>
+      </div>
+
+      <div class="pricing-tabs-wrapper">
+        <div class="pricing-table-card">
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th data-i18n="th_name">Xizmat nomi</th>
+                <th data-i18n="th_desc">Tavsif / Xususiyat</th>
+                <th data-i18n="th_warranty">Kafolat</th>
+                <th data-i18n="th_price">Narxi</th>
+                <th data-i18n="th_action">Amal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong data-i18n="tr1_name">Dastlabki ko'rik va maslahat</strong></td>
+                <td data-i18n="tr1_desc">Shifokor ko'rigi, davolash rejasi tuzish</td>
+                <td>—</td>
+                <td><span class="free-badge" data-i18n="badge_free">Bepul</span></td>
+                <td><button class="btn-table-action open-modal-btn" data-service="Bepul ko'rik" data-i18n="btn_table_action">Yozilish</button></td>
+              </tr>
+              <tr>
+                <td><strong data-i18n="tr2_name">Professional tish tozalash</strong></td>
+                <td data-i18n="tr2_desc">Ultratovush + AirFlow qum sepish + florlash</td>
+                <td data-i18n="tr2_w">6 oy</td>
+                <td data-i18n="tr2_p">350 000 so'm</td>
+                <td><button class="btn-table-action open-modal-btn" data-service="Professional tozalash" data-i18n="btn_table_action">Yozilish</button></td>
+              </tr>
+              <tr>
+                <td><strong data-i18n="tr3_name">Fotopolimer plomba qo'yish</strong></td>
+                <td data-i18n="tr3_desc">Germaniya nanokompozit plombasi (Gradia / Filtek)</td>
+                <td data-i18n="tr3_w">3 yil</td>
+                <td data-i18n="tr3_p">220 000 so'mdan</td>
+                <td><button class="btn-table-action open-modal-btn" data-service="Plomba qo'yish" data-i18n="btn_table_action">Yozilish</button></td>
+              </tr>
+              <tr>
+                <td><strong data-i18n="tr4_name">Tish ildiz kanallarini davolash</strong></td>
+                <td data-i18n="tr4_desc">Mikroskop ostida tozalash va dori quyish</td>
+                <td data-i18n="tr4_w">2 yil</td>
+                <td data-i18n="tr4_p">280 000 so'mdan</td>
+                <td><button class="btn-table-action open-modal-btn" data-service="Kanal davolash" data-i18n="btn_table_action">Yozilish</button></td>
+              </tr>
+              <tr>
+                <td><strong data-i18n="tr5_name">Titan implant o'rnatish (Osstem)</strong></td>
+                <td data-i18n="tr5_desc">Janubiy Koreya, to'liq o'rnatish jarayoni bilan</td>
+                <td data-i18n="tr5_w">Umrbod</td>
+                <td data-i18n="tr5_p">2 800 000 so'm</td>
+                <td><button class="btn-table-action open-modal-btn" data-service="Osstem implant" data-i18n="btn_table_action">Yozilish</button></td>
+              </tr>
+              <tr>
+                <td><strong data-i18n="tr6_name">Premium implant (Straumann)</strong></td>
+                <td data-i18n="tr6_desc">Shveytsariya, eng tez bitadigan titan qotishma</td>
+                <td data-i18n="tr6_w">Umrbod</td>
+                <td data-i18n="tr6_p">5 400 000 so'm</td>
+                <td><button class="btn-table-action open-modal-btn" data-service="Straumann implant" data-i18n="btn_table_action">Yozilish</button></td>
+              </tr>
+              <tr>
+                <td><strong data-i18n="tr7_name">Sirkoniy qoplama (Zirconia)</strong></td>
+                <td data-i18n="tr7_desc">Tabiiy tishdan ajralmaydigan yuqori mustahkamlik</td>
+                <td data-i18n="tr7_w">10 yil</td>
+                <td data-i18n="tr7_p">1 100 000 so'm</td>
+                <td><button class="btn-table-action open-modal-btn" data-service="Sirkoniy qoplama" data-i18n="btn_table_action">Yozilish</button></td>
+              </tr>
+              <tr>
+                <td><strong data-i18n="tr8_name">Keramik vinir (E.max)</strong></td>
+                <td data-i18n="tr8_desc">Ultra yupqa estetika, 1 ta tish uchun</td>
+                <td data-i18n="tr8_w">7 yil</td>
+                <td data-i18n="tr8_p">1 600 000 so'm</td>
+                <td><button class="btn-table-action open-modal-btn" data-service="Vinir E.max" data-i18n="btn_table_action">Yozilish</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking CTA Banner -->
+  <section class="section booking-banner">
+    <div class="container">
+      <div class="booking-banner-card">
+        <div class="banner-content">
+          <span class="banner-tag" data-i18n="banner_tag">Maxsus taklif</span>
+          <h2 class="banner-title" data-i18n="banner_title">Birinchi marta kelayotgan mijozlar uchun 20% chegirma!</h2>
+          <p class="banner-desc" data-i18n="banner_desc">
+            Hoziroq onlayn qabulga yoziling va bepul tashxis bilan birga muolajalarga maxsus chegirmaga ega bo'ling.
+          </p>
+          <div class="banner-badges">
+            <span class="bb-item" data-i18n="banner_b1">✓ Bepul 3D skanerlash</span>
+            <span class="bb-item" data-i18n="banner_b2">✓ Bepul davolash rejasi</span>
+            <span class="bb-item" data-i18n="banner_b3">✓ Qulay vaqt tanlash</span>
+          </div>
+        </div>
+        <div class="banner-form-col">
+          <form class="banner-form" id="bannerBookingForm">
+            <h3 data-i18n="banner_form_title">Onlayn qabulga yozilish</h3>
+            <div class="form-group">
+              <label for="bName" data-i18n="form_label_name">Ismingiz</label>
+              <input type="text" id="bName" required placeholder="Masalan: Sardor" class="form-input" data-i18n-placeholder="ph_name">
+            </div>
+            <div class="form-group">
+              <label for="bPhone" data-i18n="form_label_phone">Telefon raqamingiz</label>
+              <input type="tel" id="bPhone" required placeholder="+998 (__) ___-__-__" class="form-input">
+            </div>
+            <div class="form-group">
+              <label for="bService" data-i18n="form_label_service">Qaysi xizmat kerak?</label>
+              <select id="bService" class="form-select service-select">
+                <option value="Dastlabki bepul ko'rik" data-i18n="opt_s1">Dastlabki bepul ko'rik</option>
+                <option value="Tish davolash / Plomba" data-i18n="opt_s2">Tish davolash / Plomba</option>
+                <option value="Implantatsiya" data-i18n="opt_s3">Implantatsiya</option>
+                <option value="Breketlar va Ortodontiya" data-i18n="opt_s4">Breketlar va Ortodontiya</option>
+                <option value="Vinirlar va Oqartirish" data-i18n="opt_s5">Vinirlar va Oqartirish</option>
+                <option value="Bolalar tish shifokori" data-i18n="opt_s6">Bolalar tish shifokori</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block btn-lg" data-i18n="btn_claim_discount">Chegirmani band qilish</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section faq-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag" data-i18n="faq_tag">Savol-Javoblar</span>
+        <h2 class="section-title" data-i18n="faq_title">Tez-tez beriladigan savollar</h2>
+        <p class="section-subtitle" data-i18n="faq_subtitle">Sizni qiziqtirgan savollarga javob topa olmadingizmi? Qo'ng'iroq qiling, bepul maslahat beramiz.</p>
+      </div>
+
+      <div class="faq-accordion" id="faqAccordion">
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span data-i18n="faq_q1">Tish davolash va implantatsiya og'riqlimi?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq_a1">Mutlaqo og'riqsiz! Klinikamizda Germaniyada ishlab chiqarilgan zamonaviy kompyuterli anesteziya tizimlari qo'llaniladi. Siz in'ektsiya (ukol) qilish lahzasini ham his qilmaysiz.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq_q2">Dastlabki ko'rik va konsultatsiya haqiqatan ham bepulmi?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq_a2">Ha! Birinchi marta tashrif buyurganingizda shifokor ko'rigi, tishlar holatini to'liq baholash va aniq narxlar ko'rsatilgan davolash rejasini tuzib berish mutlaqo bepul.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq_q3">Implant o'rnatish qancha vaqt oladi?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq_a3">1 dona implantni suyakka o'rnatish jarayoni atigi 15-20 daqiqa davom etadi. Suyak bilan to'liq birikib ketish davri esa individual holatga qarab 2 oydan 4 oygacha vaqtni tashkil qiladi.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq_q4">Kafolat qanday beriladi?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq_a4">Davolash yakunlanganidan so'ng bemorga rasmiy kafolat taloni va pasporti beriladi. Implantlarimizga esa ishlab chiqaruvchi zavod tomonidan umrbod kafolat taqdim etiladi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="section reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag" data-i18n="rev_tag">Mijozlarimiz fikrlari</span>
+        <h2 class="section-title" data-i18n="rev_title">Bizga bildirilgan ishonch</h2>
+        <p class="section-subtitle" data-i18n="rev_subtitle">28 000 dan ortiq mamnun bemorlarimiz o'z tabassumlarini bizga ishonishgan</p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-text" data-i18n="rev_1_text">"Klinikaga tish og'rig'i bilan juda qo'rqib borgandim. Dr. Rustam aka shunchalik tez va og'riqsiz davolab berdiki, hatto sezmay qoldim! Xizmat ko'rsatish Yevropa darajasida."</p>
+          <div class="rev-author">
+            <div class="rev-avatar">AZ</div>
+            <div>
+              <strong data-i18n="rev_1_author">Azizbek Zokirov</strong>
+              <span data-i18n="rev_1_role">Tadbirkor, Toshkent</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-text" data-i18n="rev_2_text">"Breket qo'ydirish uchun ko'p klinikalarni qidirdim. DentaLux'dagi Nigora opani tanlab adashmabman! 1 yilda tishlarim tekis va chiroyli bo'lib qoldi. Katta rahmat!"</p>
+          <div class="rev-author">
+            <div class="rev-avatar">MN</div>
+            <div>
+              <strong data-i18n="rev_2_author">Malika Nazarova</strong>
+              <span data-i18n="rev_2_role">Dizayner</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-text" data-i18n="rev_3_text">"Farzandim tish shifokoridan juda qo'rqardi. Madina shifokor bolam bilan o'yin o'ynab, multfilm qo'yib berib tishini davoladi. Endi o'zi xursand bo'lib boradi."</p>
+          <div class="rev-author">
+            <div class="rev-avatar">SK</div>
+            <div>
+              <strong data-i18n="rev_3_author">Shahnoza Karimova</strong>
+              <span data-i18n="rev_3_role">Uy bekasi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Map Section -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="contact-card">
+        <div class="contact-info">
+          <span class="section-tag" data-i18n="contact_tag">Aloqa</span>
+          <h2 class="contact-title" data-i18n="contact_title">Sizni klinikamizda kutib qolamiz!</h2>
+          <p class="contact-desc" data-i18n="contact_desc">
+            Savollaringiz bormi? Biz bilan bog'laning yoki tashrif buyuring. Administratorlarimiz barcha ma'lumotlarni berishga tayyor.
+          </p>
+
+          <div class="contact-list">
+            <div class="c-item">
+              <div class="c-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <strong data-i18n="contact_addr_label">Manzilimiz:</strong>
+                <p data-i18n="contact_addr_val">Toshkent shahri, Amir Temur shox ko'chasi, 45-uy (Mo'ljal: Metro Amir Temur)</p>
+              </div>
+            </div>
+
+            <div class="c-item">
+              <div class="c-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <strong data-i18n="contact_phone_label">Telefon raqamlar:</strong>
+                <p><a href="tel:+998712001122">+998 (71) 200-11-22</a>, <a href="tel:+998901234567">+998 (90) 123-45-67</a></p>
+              </div>
+            </div>
+
+            <div class="c-item">
+              <div class="c-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <strong data-i18n="contact_time_label">Ish tartibi:</strong>
+                <p data-i18n-html="contact_time_val">Dushanba - Shanba: 08:30 — 20:00<br>Yakshanba: 09:00 — 16:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-map-mockup">
+          <iframe 
+            class="real-map-iframe"
+            title="DentaLux Klinika Lokatsiyasi"
+            src="https://maps.google.com/maps?q=Tashkent,+Amir+Temur+Avenue+45&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <div class="map-overlay-text">
+            <span data-i18n="map_overlay_address">📍 Toshkent sh., Amir Temur 45</span>
+            <a href="https://maps.google.com/?q=Tashkent,+Amir+Temur+Avenue+45" target="_blank" rel="noopener" class="btn btn-sm btn-primary" data-i18n="btn_open_map">Xaritada ochish</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-col col-brand">
+        <div class="logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M16 3C11.5 3 9 6.5 9 10C9 13.5 10.5 16 11.5 19C12.5 22 13 29 15 29C16.5 29 16.5 23 16 20C15.5 23 15.5 29 17 29C19 29 19.5 22 20.5 19C21.5 16 23 13.5 23 10C23 6.5 20.5 3 16 3Z" fill="#38bdf8" stroke="#ffffff" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <span class="logo-title text-white">Denta<span>Lux</span></span>
+        </div>
+        <p class="footer-about" data-i18n="footer_about">
+          Zamonaviy stomatologik innovatsiyalar, professional shifokorlar va kafolatlangan davolash natijasi. Sog'lom tabassumingiz — bizning yutug'imiz!
+        </p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Telegram" class="social-link">TG</a>
+          <a href="#" aria-label="Instagram" class="social-link">IG</a>
+          <a href="#" aria-label="Facebook" class="social-link">FB</a>
+          <a href="#" aria-label="YouTube" class="social-link">YT</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footer_h_services">Xizmatlar</h4>
+        <ul class="footer-links">
+          <li><a href="#services" data-i18n="srv_1_title">Terapevtik davolash</a></li>
+          <li><a href="#services" data-i18n="srv_2_title">Implantatsiya</a></li>
+          <li><a href="#services" data-i18n="srv_3_title">Breketlar va elaynerlar</a></li>
+          <li><a href="#services" data-i18n="srv_4_title">Vinirlar (Estetika)</a></li>
+          <li><a href="#services" data-i18n="srv_5_title">Sirkoniy qoplamalar</a></li>
+          <li><a href="#services" data-i18n="srv_6_title">Bolalar stomatologiyasi</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footer_h_links">Tezkor havolalar</h4>
+        <ul class="footer-links">
+          <li><a href="#hero" data-i18n="nav_home">Bosh sahifa</a></li>
+          <li><a href="#advantages" data-i18n="nav_advantages">Afzalliklarimiz</a></li>
+          <li><a href="#doctors" data-i18n="nav_doctors">Shifokorlarimiz</a></li>
+          <li><a href="#prices" data-i18n="nav_prices">Narxlar ro'yxati</a></li>
+          <li><a href="#reviews" data-i18n="nav_reviews">Mijozlar fikrlari</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Manzil va aloqa</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footer_h_reception">Klinika qabuli</h4>
+        <p class="footer-time" data-i18n="footer_time_label">Har kuni uzluksiz xizmat:</p>
+        <p class="footer-strong" data-i18n-html="footer_time_val">Dush - Shan: 08:30 — 20:00<br>Yak: 09:00 — 16:00</p>
+        <p class="footer-emergency" data-i18n="footer_emerg_label">Tezkor aloqa (24/7):</p>
+        <a href="tel:+998712001122" class="footer-phone">+998 (71) 200-11-22</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p data-i18n="footer_copyright">&copy; 2026 DentaLux Stomatologiya Markazi. Barcha huquqlar himoyalangan.</p>
+        <p data-i18n="footer_license">Litsenziya № D-048291 O'zR Sog'liqni Saqlash Vazirligi tomonidan berilgan.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Appointment Modal -->
+  <div class="modal-overlay" id="appointmentModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Yopish">&times;</button>
+      
+      <div class="modal-header">
+        <div class="modal-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+        </div>
+        <h3 class="modal-title" data-i18n="modal_title">Qabulga yozilish</h3>
+        <p class="modal-subtitle" data-i18n="modal_subtitle">Ma'lumotlaringizni qoldiring, administratorimiz 5 daqiqada siz bilan bog'lanadi.</p>
+      </div>
+
+      <form class="modal-form" id="modalBookingForm">
+        <div class="form-group">
+          <label for="mName" data-i18n="modal_label_name">To'liq ismingiz</label>
+          <input type="text" id="mName" required placeholder="Masalan: Jamshid Aliyev" class="form-input" data-i18n-placeholder="ph_modal_name">
+        </div>
+
+        <div class="form-group">
+          <label for="mPhone" data-i18n="form_label_phone">Telefon raqamingiz</label>
+          <input type="tel" id="mPhone" required placeholder="+998 (90) 123-45-67" class="form-input">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="mService" data-i18n="modal_label_service">Xizmat turi</label>
+            <select id="mService" class="form-select service-select">
+              <option value="Dastlabki bepul ko'rik" data-i18n="opt_s1">Dastlabki bepul ko'rik</option>
+              <option value="Terapevtik davolash" data-i18n="opt_s2">Terapevtik davolash</option>
+              <option value="Implantatsiya" data-i18n="opt_s3">Implantatsiya</option>
+              <option value="Ortodontiya (Breketlar)" data-i18n="opt_s4">Ortodontiya (Breketlar)</option>
+              <option value="Vinirlar va Estetika" data-i18n="opt_s5">Vinirlar va Estetika</option>
+              <option value="Ortopediya (Qoplamalar)" data-i18n="opt_s7">Ortopediya (Qoplamalar)</option>
+              <option value="Bolalar stomatologiyasi" data-i18n="opt_s6">Bolalar stomatologiyasi</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="mDoctor" data-i18n="modal_label_doc">Shifokor (ixtiyoriy)</label>
+            <select id="mDoctor" class="form-select">
+              <option value="" data-i18n="opt_doc_any">Ixtiyoriy shifokor</option>
+              <option value="Dr. Rustam Alimov" data-i18n="opt_doc_1">Dr. Rustam Alimov (Implantolog)</option>
+              <option value="Dr. Nigora Karimova" data-i18n="opt_doc_2">Dr. Nigora Karimova (Ortodont)</option>
+              <option value="Dr. Jasur Sobirov" data-i18n="opt_doc_3">Dr. Jasur Sobirov (Ortoped)</option>
+              <option value="Dr. Madina Umarova" data-i18n="opt_doc_4">Dr. Madina Umarova (Bolalar shifokori)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="mDate" data-i18n="modal_label_date">Qulay sana va vaqt</label>
+          <input type="date" id="mDate" class="form-input">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg" data-i18n="modal_btn_submit">Qabulga yozilishni tasdiqlash</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Success Toast Notification -->
+  <div class="toast" id="toastNotification">
+    <div class="toast-icon">✓</div>
+    <div class="toast-body">
+      <strong>Muvaffaqiyatli qabul qilindi!</strong>
+      <p>Tez orada mutaxassisimiz siz bilan bog'lanadi.</p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
